@@ -2,10 +2,17 @@ import { useState } from 'react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
+import Avatar from './components/atoms/Avatar/Avatar'
+import Decouvrir from './pages/Decouvrir/Decouvrir'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  // Page Découvrir par défaut ; l'écran de démarrage reste sur #demarrage
+  if (window.location.hash !== '#demarrage') {
+    return <Decouvrir />
+  }
 
   return (
     <>
@@ -15,6 +22,7 @@ function App() {
           <img src={reactLogo} className="framework" alt="React logo" />
           <img src={viteLogo} className="vite" alt="Vite logo" />
         </div>
+        <Avatar userType="rêveur" />
         <div>
           <h1>Get started</h1>
           <p>

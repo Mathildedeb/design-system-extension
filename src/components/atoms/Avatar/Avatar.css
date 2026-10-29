@@ -1,0 +1,18 @@
+.avatar {
+  --avatar-size: 24px;
+
+  display: inline-block;
+  flex-shrink: 0;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+  background: var(--icon-extratLight);
+}
+
+.avatar--reveur {
+  background: var(--icon-extratLight);
+}
+
+.avatar--cauchemar {
+  background: var(--icon-extrat);
+}
