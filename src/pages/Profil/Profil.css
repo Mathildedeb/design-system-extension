@@ -1,0 +1,42 @@
+.profil {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg, 24px);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 450px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: var(--space-lg, 24px) var(--space-md, 16px);
+  background: var(--usage-background-default, #140a1f);
+  color: var(--usage-text-default, rgb(250 250 250 / 0.92));
+  text-align: left;
+}
+
+.profil__back {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  min-height: 44px;
+  color: inherit;
+}
+
+.profil__back:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.profil__heading {
+  margin: 0;
+}
+
+.profil__identity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md, 16px);
+}
+
+.profil__name,
+.profil__meta {
+  margin: 0;
+}
