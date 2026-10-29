@@ -16,3 +16,12 @@
 .avatar--cauchemar {
   background: var(--icon-extrat);
 }
+
+
+.avatar--reveur-lucide {
+  background: var(--color-primary-purple-300);
+}
+
+.avatar--lucide {
+  background: var(--icon-dark);
+}

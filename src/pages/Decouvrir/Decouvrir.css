@@ -22,8 +22,30 @@
   white-space: nowrap;
 }
 
+.decouvrir__top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm, 8px);
+}
+
+.decouvrir__profil {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+  color: inherit;
+}
+
+.decouvrir__profil:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
 .decouvrir__avatars {
   display: flex;
+  align-items: center;
   gap: var(--space-sm, 8px);
   margin: 0;
   padding: 0;

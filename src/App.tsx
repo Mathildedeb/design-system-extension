@@ -4,6 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import Avatar from './components/atoms/Avatar/Avatar'
 import Decouvrir from './pages/Decouvrir/Decouvrir'
+import Profil from './pages/Profil/Profil'
 import './App.css'
 
 function App() {
@@ -11,6 +12,9 @@ function App() {
 
   // Page Découvrir par défaut ; l'écran de démarrage reste sur #demarrage
   if (window.location.hash !== '#demarrage') {
+    if (window.location.pathname.replace(/\/$/, '') === '/profil') {
+      return <Profil />
+    }
     return <Decouvrir />
   }
 

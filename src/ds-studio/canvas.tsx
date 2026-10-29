@@ -1,4 +1,4 @@
-// Relais DS-Studio v3 (développement seulement) : affiche le plan de page de la
+// Relais DS-Studio v4 (développement seulement) : affiche le plan de page de la
 // Preview avec les vrais composants du projet, et les composants du DS pas
 // encore codés en maquette Figma (codés au Build). Généré par DS-Studio.
 import { StrictMode, useEffect, useState, type ComponentType } from 'react'
@@ -11,6 +11,8 @@ type Instance = {
   id: string
   component: string
   file?: string
+  // Page ouverte au clic, en mode Tester.
+  link?: string
   props: Record<string, Value>
   // Maquette Figma (rendu PNG à l'échelle 2), tant que le composant n'est pas codé.
   image?: string
@@ -85,7 +87,10 @@ function Canvas() {
             key={instance.id}
             data-ds-id={instance.id}
             onClickCapture={(event) => {
-              if (interactive) return
+              if (interactive) {
+                if (instance.link) parent.postMessage({ type: 'ds-studio:navigate', page: instance.link }, '*')
+                return
+              }
               event.preventDefault()
               event.stopPropagation()
               parent.postMessage({ type: 'ds-studio:select', id: instance.id }, '*')

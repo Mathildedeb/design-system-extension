@@ -1,6 +1,6 @@
 import './Avatar.css'
 
-export type AvatarUserType = 'rêveur' | 'cauchemar'
+export type AvatarUserType = 'rêveur' | 'cauchemar' | 'rêveur lucide' | 'lucide'
 
 export interface AvatarProps {
   /** Variante Figma « user type » */
@@ -13,6 +13,8 @@ export interface AvatarProps {
 const variantClass: Record<AvatarUserType, string> = {
   'rêveur': 'avatar--reveur',
   'cauchemar': 'avatar--cauchemar',
+  'rêveur lucide': 'avatar--reveur-lucide',
+  'lucide': 'avatar--lucide',
 }
 
 function Avatar({ userType = 'rêveur', label, className }: AvatarProps) {

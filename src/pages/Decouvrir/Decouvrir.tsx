@@ -8,17 +8,19 @@ function Decouvrir() {
   return (
     <main className="decouvrir">
       <h1 className="decouvrir__heading">Découvrir</h1>
-      <ul className="decouvrir__avatars" aria-label="Rêveurs à découvrir">
-        <li>
-          <Avatar userType="cauchemar" label="Inès, cauchemar" />
-        </li>
+      <div className="decouvrir__top">
+        <a className="decouvrir__profil" href="/profil">
+          <Avatar userType="cauchemar" label="Mon profil" />
+        </a>
+        <ul className="decouvrir__avatars" aria-label="Rêveurs à découvrir">
         <li>
           <Avatar label="Hugo, rêveur" />
         </li>
         <li>
           <Avatar userType="cauchemar" label="Léa, cauchemar" />
         </li>
-      </ul>
+        </ul>
+      </div>
       <CardDonut title="Mes nuits" value={30} trend={-12} legend="Rêves lucides" />
       <CheckBoxContent label="Me rappeler de noter mes rêves" />
       <TitleToggle title="Mode nuit" />
